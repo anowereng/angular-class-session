@@ -28,7 +28,7 @@ data: any = [
 ### API Use Data Load
 
 ```
-1 . 
+1 . interface Employees
 export interface Employees {
   postId: number;
   id: number;
@@ -36,7 +36,7 @@ export interface Employees {
   email: string ;
   body: string;
 }
-2 .
+2. EmployeesService
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Employees } from '../Models/employees';
@@ -55,7 +55,7 @@ getEmployees(): Observable<Employees> {
 }
 
 }
-3 .
+3. app-employees
 import { Component, OnInit } from '@angular/core';
 import { EmployeesService } from '../services/employees.service';
 
